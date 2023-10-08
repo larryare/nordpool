@@ -331,7 +331,7 @@ class NordpoolSensor(SensorEntity):
 
     def _update(self):
         """Set attrs"""
-        today = self.today.pop(0)
+        today = self.today[1:]
 
         if not today:
             _LOGGER.debug("No data for today, unable to set attrs")
